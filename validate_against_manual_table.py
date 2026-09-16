@@ -1,10 +1,10 @@
-"""Walidacja analizatora HURNY vs ręczna tabela Bartka (45 elektrod × 4 skany = 184 pliki).
+"""Walidacja analizatora PeakWise vs ręczna tabela Bartka (45 elektrod × 4 skany = 184 pliki).
 
 Użycie:
     uv run --with matplotlib --with scipy --with pandas --with ipython --with openpyxl \
         python walidacja_vs_tabela_bartka.py [SETUP.py] [--skan ostatni|pierwszy|srednia]
 
-SETUP.py = plik z kodem komórki SETUP notebooka (domyślnie wyciągany z HURNY_CV_Analyzer.ipynb).
+SETUP.py = plik z kodem komórki SETUP notebooka (domyślnie wyciągany z PeakWise_CV_Analyzer.ipynb).
 Tabela: dane_wyniki/FDM SPE EXPERIMENTS (1).xlsx — 1 wiersz = 1 elektroda (skan 4 wg Bartka).
 Skan: 'ostatni' = plik ba(3), 'pierwszy' = plik ba, 'srednia' = średnia z 4 plików.
 """
@@ -25,7 +25,7 @@ args = ap.parse_args()
 if args.setup:
     kod = open(args.setup).read()
 else:
-    nb = json.load(open(os.path.join(HERE, 'ElectroLab_CV_Analyzer.ipynb')))
+    nb = json.load(open(os.path.join(HERE, 'PeakWise_CV_Analyzer.ipynb')))
     kod = ''.join(nb['cells'][1]['source'])
 ns = {}
 exec(kod, ns)

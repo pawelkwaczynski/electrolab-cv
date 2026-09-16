@@ -1,6 +1,6 @@
-# experiment.json — spec dla silnika Unreal (ElectroLab 3D)
+# experiment.json — spec dla silnika Unreal (PeakWise)
 
-Schemat: `electrolab3d.experiment/1.0` | Generator: `HURNY_CV_Analyzer.ipynb` | Stan: 20.07.2026
+Schemat: `electrolab3d.experiment/1.0` | Generator: `PeakWise_CV_Analyzer.ipynb` | Stan: 20.07.2026
 
 Jedna paczka = **jedna elektroda** ze wszystkimi jej powtórzonymi skanami CV.
 W tym folderze: 46 paczek wygenerowanych z kompletu danych laboratoryjnych Bartka
@@ -11,7 +11,7 @@ W tym folderze: 46 paczek wygenerowanych z kompletu danych laboratoryjnych Bartk
 ```json
 {
  "schema": "electrolab3d.experiment/1.0",
- "generator": "HURNY_CV_Analyzer",
+ "generator": "PeakWise_CV_Analyzer",
  "electrode": { "id": "3 mm A", "series": "WE" },
  "technique": { "type": "CV", "solution": "FeMeOH 1 mM", "probe": "FeMeOH (ferrocenomethanol)" },
  "units": { "potential": "V", "current": "A", "peak_current": "nA" },
