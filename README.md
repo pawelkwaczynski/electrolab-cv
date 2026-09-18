@@ -1,5 +1,7 @@
 # PeakWise
 
+<p align="center"><a href="README.pl.md">🇵🇱 <b>Przeczytaj po polsku</b></a></p>
+
 Peak analysis for cyclic voltammetry of 3D-printed screen-printed electrodes (FeMeOH probe), written as a Google Colab notebook so that it runs without any local setup.
 
 Given NOVA text exports it finds the anodic and cathodic peaks, draws the baseline the way an analyst does it in Origin (least-squares line through the flat capacitive segment just before the faradaic onset), and reports the peak current three ways: at the maximum, on the curve at the tangent intersection, and at the tangent intersection itself. Multi-cycle files are read from the last cycle. Results go to a CSV and to `experiment.json` packages meant for a game-engine replay of the experiment (schema in `docs/EXPERIMENT_JSON_SPEC.md`).
